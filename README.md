@@ -2,14 +2,14 @@ Manual Installation
 Official Documentation
 Recommended Hardware: 4 Cores, 4GB RAM, 100GB of storage (NVME)
 
-# install dependencies, if needed
+**install dependencies, if needed**
+```
 sudo apt update && sudo apt upgrade -y
 sudo apt install curl git wget htop tmux build-essential jq make lz4 gcc unzip -y
-Node Name
-Wallet
-Port
-10
-# install go, if needed
+```
+
+**install go, if needed**
+
 cd $HOME
 VER="1.19.3"
 wget "https://golang.org/dl/go$VER.linux-amd64.tar.gz"
