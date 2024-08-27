@@ -9,7 +9,7 @@ sudo apt install curl git wget htop tmux build-essential jq make lz4 gcc unzip -
 ```
 
 **install go, if needed**
-
+```
 cd $HOME
 VER="1.19.3"
 wget "https://golang.org/dl/go$VER.linux-amd64.tar.gz"
@@ -20,14 +20,16 @@ rm "go$VER.linux-amd64.tar.gz"
 echo "export PATH=$PATH:/usr/local/go/bin:~/go/bin" >> ~/.bash_profile
 source $HOME/.bash_profile
 [ ! -d ~/go/bin ] && mkdir -p ~/go/bin
+```
 
-# set vars
+**set vars**
+```
 echo "export WALLET="wallet"" >> $HOME/.bash_profile
 echo "export MONIKER="test"" >> $HOME/.bash_profile
 echo "export UPTICK_CHAIN_ID="origin_1170-3"" >> $HOME/.bash_profile
 echo "export UPTICK_PORT="10"" >> $HOME/.bash_profile
 source $HOME/.bash_profile
-
+``` 
 # download binary
 cd $HOME
 rm -rf uptick
