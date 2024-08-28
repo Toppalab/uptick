@@ -30,13 +30,15 @@ echo "export UPTICK_CHAIN_ID="origin_1170-3"" >> $HOME/.bash_profile
 echo "export UPTICK_PORT="10"" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ``` 
-# download binary
+**download binary**
+```
 cd $HOME
 rm -rf uptick
 git clone https://github.com/UptickNetwork/uptick.git
 cd uptick
 git checkout v0.2.19
 make install
+```
 
 # config and init app
 uptickd config node tcp://localhost:${UPTICK_PORT}657
