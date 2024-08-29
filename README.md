@@ -40,11 +40,13 @@ git checkout v0.2.19
 make install
 ```
 
-# config and init app
+**config and init app**
+```
 uptickd config node tcp://localhost:${UPTICK_PORT}657
 uptickd config keyring-backend os
 uptickd config chain-id origin_1170-3
 uptickd init "test" --chain-id origin_1170-3
+```
 
 # download genesis and addrbook
 wget -O $HOME/.uptickd/config/genesis.json https://server-4.itrocket.net/testnet/uptick/genesis.json
