@@ -48,9 +48,11 @@ uptickd config chain-id origin_1170-3
 uptickd init "test" --chain-id origin_1170-3
 ```
 
-# download genesis and addrbook
+**download genesis and addrbook**
+```
 wget -O $HOME/.uptickd/config/genesis.json https://server-4.itrocket.net/testnet/uptick/genesis.json
 wget -O $HOME/.uptickd/config/addrbook.json  https://server-4.itrocket.net/testnet/uptick/addrbook.json
+```
 
 # set seeds and peers
 SEEDS="cc4d304a2d2062dfe9f77a7ee0b9aa3aa1ba7869@uptick-testnet-seed.itrocket.net:10656"
