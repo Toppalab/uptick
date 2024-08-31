@@ -54,12 +54,13 @@ wget -O $HOME/.uptickd/config/genesis.json https://server-4.itrocket.net/testnet
 wget -O $HOME/.uptickd/config/addrbook.json  https://server-4.itrocket.net/testnet/uptick/addrbook.json
 ```
 
-# set seeds and peers
+**set seeds and peers**
+```
 SEEDS="cc4d304a2d2062dfe9f77a7ee0b9aa3aa1ba7869@uptick-testnet-seed.itrocket.net:10656"
 PEERS="b232825b5b50857c13d2e89a2988eee462ed5462@uptick-testnet-peer.itrocket.net:10656,653994d33ea77a6e3dcadbe2fe8b9a58177e3573@57.128.22.78:21456,0b442a23cc0e5b27877e1e4fd040c3155866ab12@207.180.236.118:26656,8a64818c94e5b1aca7974a658c58ca9248c8b8fe@207.180.231.123:26656,cda6bd82e62e8c91b54498d7fbd930b962f1125b@47.128.211.171:26656,ac6ae007ce6ad5cd5df15ac74edafcf3a9f6f7c9@190.2.146.152:29656,6dec50675cfd4b625694483259476cb41a9a3956@157.90.33.62:22656"
 sed -i -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*seeds *=.*/seeds = \"$SEEDS\"/}" \
        -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*persistent_peers *=.*/persistent_peers = \"$PEERS\"/}" $HOME/.uptickd/config/config.toml
-
+```
 
 # set custom ports in app.toml
 sed -i.bak -e "s%:1317%:${UPTICK_PORT}317%g;
