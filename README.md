@@ -115,13 +115,15 @@ WantedBy=multi-user.target
 EOF
 ```
 
-# reset and download snapshot
+**reset and download snapshot**
+```
 uptickd tendermint unsafe-reset-all --home $HOME/.uptickd
 if curl -s --head curl https://server-4.itrocket.net/testnet/uptick/uptick_2024-08-25_3302817_snap.tar.lz4 | head -n 1 | grep "200" > /dev/null; then
   curl https://server-4.itrocket.net/testnet/uptick/uptick_2024-08-25_3302817_snap.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.uptickd
     else
   echo "no snapshot founded"
 fi
+```
 
 # enable and start service
 sudo systemctl daemon-reload
