@@ -132,10 +132,11 @@ sudo systemctl enable uptickd
 sudo systemctl restart uptickd && sudo journalctl -u uptickd -f
 Automatic Installation
 pruning: custom: 100/0/10 | indexer: null
-```
 
 source <(curl -s https://itrocket.net/api/testnet/uptick/autoinstall/)
-Create wallet
+```
+
+**Create wallet**
 # to create a new wallet, use the following command. don’t forget to save the mnemonic
 uptickd keys add $WALLET
 
