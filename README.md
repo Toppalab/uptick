@@ -137,8 +137,9 @@ source <(curl -s https://itrocket.net/api/testnet/uptick/autoinstall/)
 ```
 
 **Create wallet**
-# to create a new wallet, use the following command. don’t forget to save the mnemonic
+```
 uptickd keys add $WALLET
+```
 
 # to restore exexuting wallet, use the following command
 uptickd keys add $WALLET --recover
