@@ -160,22 +160,8 @@ source $HOME/.bash_profile
 uptickd status 2>&1 | jq 
 ```
 
-# before creating a validator, you need to fund your wallet and check balance
-uptickd query bank balances $WALLET_ADDRESS 
-Create validator
-Moniker
-Identity
-Details
-I love blockchain ❤️
-Amount, auoc
-1000000
-Commission rate
-0.1
-Commission max rate
-0.2
-Commission max change rate
-0.01
-Website
+**before creating a validator, you need to fund your wallet and check balance**
+```
 uptickd tx staking create-validator \
 --amount 1000000auoc \
 --from $WALLET \
@@ -191,6 +177,8 @@ uptickd tx staking create-validator \
 --chain-id origin_1170-3 \
 --fees 3000000000000000auoc \
 -y
+```
+
 Monitoring
 If you want to have set up a monitoring and alert system use our cosmos nodes monitoring guide with tenderduty
 
