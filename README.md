@@ -190,10 +190,12 @@ sudo ufw allow ${UPTICK_PORT}656/tcp
 sudo ufw enable
 ```
 
-Delete node
+**Delete node**
+```
 sudo systemctl stop uptickd
 sudo systemctl disable uptickd
 sudo rm -rf /etc/systemd/system/uptickd.service
 sudo rm $(which uptickd)
 sudo rm -rf $HOME/.uptickd
 sed -i "/UPTICK_/d" $HOME/.bash_profile
+```
